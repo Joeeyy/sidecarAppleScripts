@@ -18,6 +18,7 @@ on openSystemSettings()
     tell application "System Settings"
         activate
     end tell
+    delay 0.1
 end openSystemSettings
 
 on configSideCar(ipadName)
@@ -28,6 +29,7 @@ on configSideCar(ipadName)
             -- 模拟点击“添加显示器”按钮，稍作延时
             click pop up button 1 of group 1 of group 2 of splitter group 1 of group 1 of window 1
             -- 模拟点击你的 iPad 名称
+            delay 0.5
             click menu item ipadName of menu "添加" of pop up button "添加" of group 1 of group 2 of splitter group 1 of group 1 of window 1
         end tell
     end tell
